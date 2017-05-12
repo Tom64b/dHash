@@ -42,8 +42,8 @@ Demo
 
 These images are similar:
 
-![Equals1](https://raw.githubusercontent.com/Tom64b/dHash/master/images/forest/forest-high.jpg)
-![Equals2](https://raw.githubusercontent.com/Tom64b/dHash/master/images/forest/forest-copyright.jpg)
+![Equals1](https://raw.githubusercontent.com/Tom64b/dHash/master/images/forest-high.jpg)
+![Equals2](https://raw.githubusercontent.com/Tom64b/dHash/master/images/forest-copyright.jpg)
 
 	Image 1 hash: e0f8fef6f2ecfcf4 (1110000011111000111111101111011011110010111011001111110011110100)
 	Image 2 hash: e0f8eed4d2ecfcf4 (1110000011111000111011101101010011010010111011001111110011110100)
