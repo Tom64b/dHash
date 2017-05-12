@@ -52,7 +52,7 @@ These images are similar:
 These images are different:
 
 ![Equals1](https://raw.githubusercontent.com/Tom64b/dHash/master/images/tumblr_ndyfnr7lk21tubinno1_1280.jpg)
-![Equals2]https://raw.githubusercontent.com/Tom64b/dHash/master/images/tumblr_ndyfq386o41tubinno1_1280.jpg)
+![Equals2](https://raw.githubusercontent.com/Tom64b/dHash/master/images/tumblr_ndyfq386o41tubinno1_1280.jpg)
 
 	Image 1 hash: 68484849535b7575 (0110100001001000010010000100100101010011010110110111010101110101)
 	Image 2 hash: e1c1e2a7bbaf6faf (1110000111000001111000101010011110111011101011110110111110101111)
