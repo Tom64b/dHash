@@ -20,7 +20,7 @@ Most likely all (Windows/Linux/OSX, in 32bit and 64bit variants, are fine)
 Usage
 -----
 
-Calculating a perceptual hash for an image using the default implementation:
+Calculating a perceptual hash for an image:
 
 ```php
 include 'dhash.php';
