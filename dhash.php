@@ -1,5 +1,6 @@
 <?php //Author: Tom64b | Website: github.com/Tom64b | Code based on article by Dr. Neal Krawetz | License: MIT | Date: 2017-05-12
-function dhash($fname, $onlyJPG = true)
+// crop = 0 => default, crop = 1 => skip the outer pixels, effectively cropping the thumb (remove border noise!)
+function dhash($fname, $crop = 0, $onlyJPG = true)
 {
 	// load exif thumbnail if possible; otherwise- load the image
 	$thumb = exif_thumbnail($fname, $wid, $hei);
@@ -11,21 +12,21 @@ function dhash($fname, $onlyJPG = true)
 		unset($thumb);
 	}
 	// resize to 9x8 = 72 pixels, apply grayscale
-	$img = imagecreatetruecolor(9, 8);
-	imagecopyresampled($img, $src, 0, 0, 0, 0, 9, 8, $wid, $hei);
+	$img = imagecreatetruecolor(9+$crop*2, 8+$crop*2);
+	imagecopyresampled($img, $src, 0, 0, 0, 0, 9+$crop*2, 8+$crop*2, $wid, $hei);
 	imagedestroy($src);    
 	imagefilter($img, IMG_FILTER_GRAYSCALE);
 	//calculate dHash (hackerfactor.com/blog/?/archives/529-Kind-of-Like-That.html)
 	$hash = 0;
 	$bit = 1;
-	for ($y=0; $y<8; $y++) {
+	for ($y=0+$crop; $y<8; $y++) {
 		if ($y == 4) { //second half of the image, this whole IF can be removed on 64bit machines
 			$res = sprintf("%08x", $hash);
 			$hash = 0;
 			$bit = 1;
 		}
 		$previous = imagecolorat($img, 0, $y) & 0xFF;
-		for ($x=1; $x<9; $x++) {
+		for ($x=1+$crop; $x<9; $x++) {
 			$current = imagecolorat($img, $x, $y) & 0xFF;
 			if ($previous > $current) {
 				$hash |= $bit;
