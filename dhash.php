@@ -1,4 +1,4 @@
-<?php //Author: Tom64b | Website: github.com/Tom64b | Code based on article by Dr. Neal Krawetz | License: MIT | Date: 2017-05-12
+<?php //Author: Tom64b | crop: mrAceT 2021-04-02 | Website: github.com/Tom64b | Code based on article by Dr. Neal Krawetz | License: MIT | Date: 2017-05-12
 // crop = 0 => default, crop = 1 => skip the outer pixels, effectively cropping the thumb (remove border noise!)
 function dhash($fname, $crop = 0, $onlyJPG = true)
 {
